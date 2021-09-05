@@ -3,7 +3,7 @@
 	"FileReferences": {
 		"Moc": "Miku.moc3",
 		"Textures": [
-			"Miku.4096/texture_00.png"
+			"Miku.1024/texture_00.png"
 		],
 		"Physics": "Miku.physics3.json",
 		"DisplayInfo": "Miku.cdi3.json"
@@ -11,12 +11,12 @@
 	"Groups": [
 		{
 			"Target": "Parameter",
-			"Name": "LipSync",
+			"Name": "EyeBlink",
 			"Ids": []
 		},
 		{
 			"Target": "Parameter",
-			"Name": "EyeBlink",
+			"Name": "LipSync",
 			"Ids": []
 		}
 	]
