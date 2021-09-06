@@ -4,7 +4,6 @@
     height: 65%;
     bottom: 0;
     z-index:10;
-    background-color: rgba(15, 155, 155, 0.5);
 }
 .miniMascots{
     position: fixed;
@@ -13,7 +12,6 @@
     height: 100vh;
     right:0;
     top: 0vh;
-    background-color: rgba(215,60,65,0.5);
 }
 
 .MikuClick{
@@ -34,7 +32,6 @@
 	margin: 0;
 	padding: 0;
 	list-style-type: none;
-	background-color: rgba(238,238,238,0.5);
     left: 0%;
     bottom: 65%;
 }
