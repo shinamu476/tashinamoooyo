@@ -1,3 +1,8 @@
+.main{
+    width: calc(100vw - 300px);
+    text-align: center;
+}
+
 .Miku{
     position: absolute;
     width: 100%;
@@ -12,7 +17,9 @@
     height: 100vh;
     right:0;
     top: 0vh;
+    background-color: rgb(238, 247, 255);
 }
+
 
 .MikuClick{
     position: absolute;
@@ -34,6 +41,7 @@
 	list-style-type: none;
     left: 0%;
     bottom: 65%;
+    
 }
 #menu li{ 
 	text-align: center;
