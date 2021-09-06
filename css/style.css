@@ -29,7 +29,7 @@
 	margin: 0;
 	padding: 0;
 	list-style-type: none;
-	background-color: #eeeeee;
+	background-color: rgba(238,238,238,0.5);
     left: 0%;
     top: 0%;
 }
@@ -47,9 +47,20 @@
 }
 #menu li a.active {
 	color: #ffffff;
-	background-color: #da3c41;
+	background-color: rgba(218,60,65,0.5);
 }
 #menu li a:hover:not(.active) {
 	color: #ffffff;
-	background-color: #1b2538;
+	background-color: rgba(27,37,56,0.5);
+}
+
+body {
+    background : linear-gradient(to right,
+    red,
+    orange,
+    yellow,
+    green,
+    aqua,
+    blue,
+    purple);
 }
