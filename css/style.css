@@ -1,0 +1,54 @@
+.Miku{
+    position: absolute;
+    width: 100%;
+    height: 100%;
+    z-index:9;
+}
+.miniMascots{
+    position: fixed;
+    z-index:9;
+    width: 50vw;
+    height: 90vh;
+    left: 60%;
+    top: 30%;
+}
+
+.MikuText{
+    position: absolute;
+    top: 45%;
+    left: 20%;
+    z-index:10;
+}
+
+/* MENU  https://copypet.jp/codedescription/670/ */
+#menu ul{ 
+    position: absolute;
+    z-index: 10;
+    width: 200px;
+	margin: 0;
+	padding: 0;
+	list-style-type: none;
+	background-color: #eeeeee;
+    left: 35%;
+    top: 15%;
+}
+#menu li{ 
+	text-align: center;
+}
+#menu li a{
+	display: block;
+	padding: 8px 16px;
+	text-decoration: none;
+	color: #000000;
+}
+#menu li:last-child {
+	border-bottom: none;
+}
+#menu li a.active {
+	color: #ffffff;
+	background-color: #da3c41;
+}
+#menu li a:hover:not(.active) {
+	color: #ffffff;
+	background-color: #1b2538;
+}
