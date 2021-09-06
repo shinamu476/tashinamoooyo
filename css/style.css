@@ -1,7 +1,8 @@
 .Miku{
     position: absolute;
     width: 100%;
-    height: 100%;
+    height: 60%;
+    top: 30%;
     z-index:9;
 }
 .miniMascots{
@@ -29,8 +30,8 @@
 	padding: 0;
 	list-style-type: none;
 	background-color: #eeeeee;
-    left: 35%;
-    top: 15%;
+    left: 0%;
+    top: 0%;
 }
 #menu li{ 
 	text-align: center;
