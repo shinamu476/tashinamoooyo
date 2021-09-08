@@ -500,8 +500,8 @@
 						"Id": "Param3"
 					},
 					"VertexIndex": 1,
-					"Scale": 0.967,
-					"Weight": 100,
+					"Scale": 0.66,
+					"Weight": 75,
 					"Type": "Angle",
 					"Reflect": false
 				},
@@ -511,7 +511,7 @@
 						"Id": "Param16"
 					},
 					"VertexIndex": 3,
-					"Scale": 0.698,
+					"Scale": 0.53,
 					"Weight": 100,
 					"Type": "Angle",
 					"Reflect": false
@@ -522,7 +522,7 @@
 						"Id": "Param4"
 					},
 					"VertexIndex": 2,
-					"Scale": 0.944,
+					"Scale": 0.57,
 					"Weight": 100,
 					"Type": "Angle",
 					"Reflect": false
@@ -556,7 +556,7 @@
 					},
 					"Mobility": 1,
 					"Delay": 1.28,
-					"Acceleration": 0.63,
+					"Acceleration": 0.89,
 					"Radius": 15
 				},
 				{
@@ -818,7 +818,7 @@
 						"Id": "Param17"
 					},
 					"VertexIndex": 1,
-					"Scale": 2.942,
+					"Scale": 2.913,
 					"Weight": 100,
 					"Type": "Angle",
 					"Reflect": false
@@ -979,8 +979,8 @@
 						"Id": "Param12"
 					},
 					"VertexIndex": 1,
-					"Scale": 42.478,
-					"Weight": 30,
+					"Scale": 38.058,
+					"Weight": 50,
 					"Type": "Angle",
 					"Reflect": false
 				},
@@ -990,8 +990,8 @@
 						"Id": "Param13"
 					},
 					"VertexIndex": 1,
-					"Scale": 42.478,
-					"Weight": 30,
+					"Scale": 38.058,
+					"Weight": 50,
 					"Type": "Angle",
 					"Reflect": false
 				}

@@ -3,21 +3,59 @@
 	"FileReferences": {
 		"Moc": "moooyo.moc3",
 		"Textures": [
-			"moooyo.4096/texture_00.png"
+			"moooyo.2048/texture_00.png"
 		],
 		"Physics": "moooyo.physics3.json",
-		"DisplayInfo": "moooyo.cdi3.json"
+		"DisplayInfo": "moooyo.cdi3.json",
+		"Expressions": [
+			{
+				"Name": "Jito",
+				"File": "expressions/Jito.exp3.json"
+			},
+			{
+				"Name": "close",
+				"File": "expressions/close.exp3.json"
+			}
+		],
+		"Motions": {
+			"": [
+				{
+					"File": "motions/Ear.motion3.json"
+				},
+				{
+					"File": "motions/Skirt.motion3.json"
+				}
+			]
+		}
 	},
 	"Groups": [
 		{
 			"Target": "Parameter",
-			"Name": "LipSync",
+			"Name": "EyeBlink",
 			"Ids": []
 		},
 		{
 			"Target": "Parameter",
-			"Name": "EyeBlink",
+			"Name": "LipSync",
 			"Ids": []
+		}
+	],
+	"HitAreas": [
+		{
+			"Id": "HitAreaBoob",
+			"Name": "Boob"
+		},
+		{
+			"Id": "HitAreaCrotch",
+			"Name": "Crotch"
+		},
+		{
+			"Id": "HitAreaRightEar",
+			"Name": "RightEar"
+		},
+		{
+			"Id": "HitAreaLeftEar",
+			"Name": "LeftEar"
 		}
 	]
 }
