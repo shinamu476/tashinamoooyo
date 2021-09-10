@@ -1,0 +1,42 @@
+<!DOCTYPE html>
+<html lang="ja">
+    <head>
+        <meta charset="UTF-8">
+        <title>たしなもーよ!/sassTest</title>
+        <link rel="stylesheet" href="../css/test.css">
+    </head>
+
+    <body>
+        <div class="titleText">SASSTest</div>
+        <div class="subTitleText">これはSASSを試すためのページです。</div>
+        <div class="center">
+            <div class="leftLineText">
+               丸角正方形
+            </div>
+            <div class="roundTest">
+                <div class="roundTestInner"> 
+
+                </div>
+            </div>
+            <pre><code class="prettyprint">
+.roundTest
+    position: relative
+    top: 20px
+    width: unquote('min(35vw,35vh)')
+    border-radius: 10px
+    margin: 0 auto
+    background-color: $green-color
+.roundTestInner
+    width: 0px
+    height: 0px
+    padding-bottom: 100%
+            </code></pre>
+            <span class="roundWaku">丸角正方形が中心に来ない!!</span>    
+            
+            <br><br><br>
+                このページから戻れるリンクは作ってません
+        </div>
+        
+    </body>
+
+</html>
