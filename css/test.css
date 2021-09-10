@@ -1,0 +1,96 @@
+.titleText {
+  font-size: 36px;
+  color: #81d1a0;
+  text-align: center;
+}
+
+.subTitleText {
+  width: 100%;
+  height: 120%;
+  background-color: #81d1a0;
+  text-align: center;
+  color: #fff;
+}
+
+.roundTest {
+  width: min(35vw,35vh);
+  margin: 20px;
+  border-radius: 10px;
+  background-color: #81d1a0;
+}
+
+.roundTestInner {
+  width: 0px;
+  height: 0px;
+  padding-bottom: 100%;
+}
+
+.leftLineText {
+  padding: 10px 0px 10px 20px;
+  display: inline-block;
+  border-left: solid 10px #81d1a0;
+  margin: 20px;
+  font-size: 25px;
+  color: #232a26;
+}
+
+code {
+  display: inline-block;
+  padding: 10px 30px;
+  color: #fff;
+  background-color: #232a26;
+  border-radius: 10px;
+  margin: 20px;
+  font-family: Consolas, Menlo, Monaco, -apple-system, BlinkMacSystemFont, "Segoe UI", Meiryo, monospace;
+  font-size: 12px;
+  text-align: left;
+}
+
+.center {
+  text-align: center;
+}
+
+.roundWaku {
+  padding: 10px;
+  margin: 40px;
+  border: solid 3px #81d1a0;
+  border-radius: 15px;
+  font-size: 30px;
+}
+
+#menu {
+  width: 100%;
+}
+
+#menu ul {
+  position: absolute;
+  z-index: 10;
+  width: 100%;
+  margin: 0px;
+  padding: 0;
+  list-style-type: none;
+}
+
+#menu li {
+  text-align: center;
+  font-size: 35px;
+  last-child-border-bottom: none;
+}
+
+#menu li a {
+  display: block;
+  padding: 8px 16px;
+  text-decoration: none;
+  color: #232a26;
+}
+
+#menu li a:active {
+  color: #fff;
+  background-color: rgba(218, 60, 65, 0.5);
+}
+
+#menu li a:hover:not(.active) {
+  color: #fff;
+  background-color: #81d1a0;
+}
+/*# sourceMappingURL=test.css.map */
