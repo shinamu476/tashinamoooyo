@@ -1,0 +1,94 @@
+<!DOCTYPE html>
+<html lang="ja">
+    <head>
+        <meta charset="UTF-8">
+        <title>たしなもーよ!/Live2DとWEBについて</title>
+        <link rel="stylesheet" href="../css/sass.css">
+    </head>
+    <body>
+        <div class="titleText">Live2DとWEBについて</div>
+        <div class="subTitleText">ブログっぽくしたいです</div>
+    
+        <div class="blogMain">
+            <div id="i-1">
+                <div class="leftLineText">はじめに</div>
+                <div class="text">
+                    ブログという感じ?備忘録的な?そんな感じのものを作りたかったので,それついでに書いてます。<br>
+                    この前触ったLive2Dについていい感じにまとめていけたらなーと思ってます。<br>
+                    下書きとか全くしてないのでぐちゃぐちゃかも。まぁゆるして。
+                    そして基礎知識がどこかへおいてきました。
+                </div>
+            </div>
+
+            <div id="i-2">
+                <div class="leftLineText">クリックの座標をモデルの座標へ変換</div>
+                <div class="text">
+                    クリックの座標とモデルの座標がなかなか合わなかったんすよ。
+                    そこをどうにかしました。って話をする。
+                </div>
+                <div class="text">
+                    まず<span class="code">CubismMatrix44</span>の関数を使うらしい。<br>
+                    Live2D SDKのサンプルを参考に.<br>
+                </div>
+
+                <pre><code>
+const  _deviceToScreen = new CubismMatrix44();
+function _deviceToScreenInit(){
+
+    const { width, height } = canvas;
+    const ratio: number = width / height;
+    const left: number = -ratio;
+    const right: number = ratio;
+    const bottom: number = -1.0;
+    const top: number = 1.0;
+    _deviceToScreen.loadIdentity();
+    if (width > height) {
+      const screenW: number = Math.abs(right - left);
+      _deviceToScreen.scaleRelative(screenW / width, -screenW / width);
+    } else {
+      const screenH: number = Math.abs(top - bottom);
+     _deviceToScreen.scaleRelative(screenH / height, -screenH / height);
+    }
+    _deviceToScreen.translateRelative(-width * 0.5, -height * 0.5);
+
+}
+                </code></pre>
+
+                <div class="text">
+                    こんな感じの関数を作っとく。<br>
+                </div>
+                <div class="text">
+                    次にクリックした位置を登録して,変換した座標をもらう。<br>
+                    <span class="code">onClickBegan()</span>に書いていく。
+                </div>
+
+                <pre><code>
+function onClickBegan(e: MouseEvent): void {
+
+    _deviceToScreenInit()
+    _touchManager.touchesBegan(e.clientX, e.clientY);
+
+    const x: number = _deviceToScreen.transformX(
+      _touchManager.getX()
+    );
+    const y: number = _deviceToScreen.transformY(
+      _touchManager.getY()
+    );
+}
+                </code></pre>
+
+                <div class="text">
+                    これで変換された座標が貰えるらしい。
+                    あとは<span class="code">AppCubismUserModel().isHit()</span>とかに使えばよいはず。
+                </div> 
+
+            </div>
+
+        </div>
+    
+    
+    
+    
+    
+    </body>
+</html>
