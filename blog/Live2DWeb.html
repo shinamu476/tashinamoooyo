@@ -79,7 +79,10 @@ function onClickBegan(e: MouseEvent): void {
 
                 <div class="text">
                     これで変換された座標が貰えるらしい。
-                    あとは<span class="code">AppCubismUserModel().isHit()</span>とかに使えばよいはず。
+                    あとは<span class="code">AppCubismUserModel().isHit()</span>とかに使えばよいはず。<br><br>
+                    <span class="code">_deviceToScreenInit()</span>スクリーンサイズが変わったとき(window.onresize)とかで使うのが正しいみたいですが<br>
+                    サイトが読み込まれた最初だけうまくいかなかったので,クリックするたびに呼んでる。<br>
+                    もっといい方法があると思うのでそれがわかる人は頑張って。
                 </div> 
 
             </div>
