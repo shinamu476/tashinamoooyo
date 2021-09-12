@@ -9,19 +9,25 @@
 		"DisplayInfo": "moooyo.cdi3.json",
 		"Expressions": [
 			{
-				"Name": "Jito",
+				"Name": "jito",
 				"File": "expressions/Jito.exp3.json"
 			},
 			{
 				"Name": "close",
 				"File": "expressions/close.exp3.json"
+			},
+			{
+				"Name": "default",
+				"File": "expressions/default.exp3.json"
 			}
 		],
 		"Motions": {
-			"": [
+			"MIMI": [
 				{
 					"File": "motions/Ear.motion3.json"
-				},
+				}
+			],
+			"SKIRT": [
 				{
 					"File": "motions/Skirt.motion3.json"
 				}
@@ -32,7 +38,10 @@
 		{
 			"Target": "Parameter",
 			"Name": "EyeBlink",
-			"Ids": []
+			"Ids": ["ParamEyeLOpen",
+					"ParamEyeROpen",
+					"Param"
+			]
 		},
 		{
 			"Target": "Parameter",
@@ -50,13 +59,16 @@
 			"Name": "Crotch"
 		},
 		{
+			"Id": "HitAreaLeftEar",
+			"Name": "LeftEar"
+		},
+		{
 			"Id": "HitAreaRightEar",
 			"Name": "RightEar"
 		},
 		{
-			"Id": "HitAreaLeftEar",
-			"Name": "LeftEar"
+			"Id": "HitArea",
+			"Name": ""
 		}
-		
 	]
 }
