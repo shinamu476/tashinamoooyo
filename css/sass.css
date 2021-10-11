@@ -184,4 +184,91 @@ code {
   left: 10px;
   z-index: 10;
 }
+
+#modal {
+  position: fixed;
+  top: 0;
+  left: 0;
+  bottom: 0;
+  right: 0;
+  z-index: 1000;
+  background: rgba(0, 0, 0, 0.85);
+  -webkit-animation: alpha 0.2s ease 0s 1 alternate none running;
+          animation: alpha 0.2s ease 0s 1 alternate none running;
+}
+
+#modal #modal-content {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-pack: center;
+      -ms-flex-pack: center;
+          justify-content: center;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+  height: 100vh;
+  -webkit-animation: zoom 0.2s ease 0s 1 alternate none running;
+          animation: zoom 0.2s ease 0s 1 alternate none running;
+}
+
+#modal #modal-content #modal-image {
+  position: absolute;
+  bottom: 100px;
+  min-width: calc(100vw - 100px);
+  max-height: calc(100vh - 130px);
+  -o-object-fit: contain;
+     object-fit: contain;
+}
+
+#modal #modal-content #modal-text {
+  position: absolute;
+  font-size: 30px;
+  color: #fff;
+  bottom: 30px;
+}
+
+.hidden {
+  display: none !important;
+}
+
+@-webkit-keyframes zoom {
+  0% {
+    -webkit-transform: scale(0);
+            transform: scale(0);
+  }
+  100% {
+    -webkit-transform: scale(1);
+            transform: scale(1);
+  }
+}
+
+@keyframes zoom {
+  0% {
+    -webkit-transform: scale(0);
+            transform: scale(0);
+  }
+  100% {
+    -webkit-transform: scale(1);
+            transform: scale(1);
+  }
+}
+
+@-webkit-keyframes alpha {
+  0% {
+    opacity: 0;
+  }
+  100% {
+    opacity: 1;
+  }
+}
+
+@keyframes alpha {
+  0% {
+    opacity: 0;
+  }
+  100% {
+    opacity: 1;
+  }
+}
 /*# sourceMappingURL=sass.css.map */
