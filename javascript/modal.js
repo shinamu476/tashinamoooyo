@@ -6,10 +6,10 @@ for (let i = 0; i < images.length; i++) {
   images[i].onclick = function() {
     img.src = this.src;
     text.innerHTML=this.alt
-    modal.classList.remove('hidden0');
+    modal.classList.remove('hidden');
   }
 }
 
 modal.onclick = function() {
-  modal.classList.add('hidden0');
+  modal.classList.add('hidden');
 }
