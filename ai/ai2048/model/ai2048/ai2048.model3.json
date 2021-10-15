@@ -1,0 +1,10 @@
+{
+	"Version": 3,
+	"FileReferences": {
+		"Moc": "ai2048.moc3",
+		"Textures": [
+			"ai2048.2048/texture_00.png"
+		],
+		"DisplayInfo": "ai2048.cdi3.json"
+	}
+}
