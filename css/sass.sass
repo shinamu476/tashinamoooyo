@@ -214,3 +214,30 @@ code
     
     100%
         opacity: 1
+
+
+.linkMenu
+    display: flex
+    align-items: center
+    flex-direction: column
+    ul
+        list-style: none
+        width:  unquote('min(50%,200px)')
+        
+        li
+            display: block
+            margin: 20px 0px
+            text-align: center
+            padding: 0.2em 0.5em
+            font-size: 1.3em
+            color: $green-color
+            text-decoration: none
+            user-select: none
+            border: 1px $green-color solid
+            border-radius: 20px
+            transition: 0.4s ease
+            background: $white-color
+
+            &:hover
+                color: $white-color
+                background: $green-color
