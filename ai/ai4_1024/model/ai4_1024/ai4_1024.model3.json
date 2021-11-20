@@ -1,0 +1,83 @@
+{
+	"Version": 3,
+	"FileReferences": {
+		"Moc": "ai4_1024.moc3",
+		"Textures": [
+			"ai4_1024.1024/texture_00.png"
+		],
+		"Physics": "ai4_1024.physics3.json",
+		"Pose": "ai4_1024.pose3.json",
+		"DisplayInfo": "ai4_1024.cdi3.json",
+		"Expressions": [
+			{
+				"Name": "close",
+				"File": "expressions/close.exp3.json"
+			},
+			{
+				"Name": "emotionless",
+				"File": "expressions/emotionless.exp3.json"
+			},
+			{
+				"Name": "smallEyes",
+				"File": "expressions/smallEyes.exp3.json"
+			},
+			{
+				"Name": "smile",
+				"File": "expressions/smile.exp3.json"
+			},
+			{
+				"Name": "jito",
+				"File": "expressions/jito.exp3.json"
+			},
+			{
+				"Name": "default",
+				"File": "expressions/default.exp3.json"
+			}
+		],
+		"Motions": {
+			"WAVING": [
+				{
+					"File": "motion/waving.motion3.json"
+				}
+			],
+			"YAWN": [
+				{
+					"File": "motion/yawn.motion3.json"
+				}
+			]
+		}
+	},
+	"Groups": [
+		{
+			"Target": "Parameter",
+			"Name": "EyeBlink",
+			"Ids": [
+				"ParamEyeLOpen",
+				"ParamEyeROpen",
+				"Param38"
+			]
+		},
+		{
+			"Target": "Parameter",
+			"Name": "LipSync",
+			"Ids": [
+				"ParamMouthForm",
+				"ParamMouthOpenY"
+			]
+		}
+	],
+	"HitAreas": [
+		{
+			"Id": "HitArea_leftEar",
+			"Name": "LeftEar"
+		},
+		{
+			"Id": "HitArea_rightEar",
+			"Name": "RightEar"
+		},
+		{
+			"Id": "HitArea_body",
+			"Name": "Body"
+		}
+	]
+}
