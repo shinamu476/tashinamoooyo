@@ -4,7 +4,7 @@ name = "ai4_1024"
 # ビルボーディング表示設定
 billboarding = false
 # AR 空間上のモデルの拡大率
-scale = 50
+scale = 6
 # AR 空間上のモデルの表示位置
 [models.position]
 x = 0 # 左右位置調整
