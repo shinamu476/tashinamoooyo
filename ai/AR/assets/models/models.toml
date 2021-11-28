@@ -1,9 +1,20 @@
 [[models]]
-name = "Rice"
-scale = 4
-[models.canvasOffset]
-x = -0.23
+# モデル名
+name = "ai4_1024"
+# ビルボーディング表示設定
+billboarding = false
+# AR 空間上のモデルの拡大率
+scale = 1
+# AR 空間上のモデルの表示位置
 [models.position]
-y = -0.35
+x = 0 # 左右位置調整
+y = 0 # 上下位置調整
+z = 0 # 前後位置調整
+# AR 空間上のモデルの表示角度調整
+[models.rotation]
+x = 0
+y = 0
+z = 0
+# モデルの当たり判定とモーショングループの紐付け
 [models.hitInfo]
-HitAreaBody = "TapBody"
+# 当たり判定ID = "モーショングループ名"
