@@ -4,7 +4,7 @@ name = "ai4_1024"
 # ビルボーディング表示設定
 billboarding = false
 # AR 空間上のモデルの拡大率
-scale = 1
+scale = 4
 # AR 空間上のモデルの表示位置
 [models.position]
 x = 0 # 左右位置調整
@@ -18,3 +18,4 @@ z = 0
 # モデルの当たり判定とモーショングループの紐付け
 [models.hitInfo]
 # 当たり判定ID = "モーショングループ名"
+HitArea_body = "YAWN"
