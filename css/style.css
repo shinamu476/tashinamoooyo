@@ -24,6 +24,15 @@ h2{
     top: 0vh;
     background-color: rgb(238, 247, 255);
 }
+.miniMascots2{
+    position: fixed;
+    z-index:9;
+    width: 300px;
+    height: 100vh;
+    right: 50vw;
+    top: 0vh;
+    background-color: rgb(238, 247, 255);
+}
 
 
 .MikuClick{

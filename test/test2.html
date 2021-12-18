@@ -1,0 +1,34 @@
+<!DOCTYPE html>
+<html>
+  <head>
+    <title>child html</title>
+    <script type="text/javascript">
+      function getPos() {
+        const pos = { top: 0, left: 0 };
+
+        const el = document.querySelector('#targetElement');
+        var frameEl = window.frameElement;
+        console.log(frameEl)
+        pos.top = el.getBoundingClientRect().top;
+        pos.left = el.getBoundingClientRect().left;
+
+        var doc = el.ownerDocument;
+        var childWindow = doc.defaultView;
+        while (window.top[0] != childWindow) {
+            const frameElement = childWindow.frameElement;
+            console.log(window.top[0])
+          pos.top += frameElement.getBoundingClientRect().top;
+          pos.left += frameElement.getBoundingClientRect().left;
+          childWindow = childWindow.parent;
+        }
+
+        console.log(pos);
+      };
+    </script>
+  </head>
+  <body>
+    <h1>child html</h1>
+    <div id="targetElement" style="width:20%; height:20%; margin:auto; border:1px solid black;">target</div>
+    <button onclick="getPos();">get pos</button>
+  </body>
+</html>

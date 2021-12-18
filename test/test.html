@@ -1,0 +1,74 @@
+<!DOCTYPE html>
+<html lang="ja">
+    <head>
+        <meta charset="UTF-8">
+        <title>たしなもーよ!</title>
+        <link rel="stylesheet" href="../css/style.css">
+        <script type="text/javascript">
+            function init()
+            {
+              window.onmousemove = handleMouseMove;
+              window.onmousedown = handleClickBegan;
+              window.onmouseup = handleClickEnded;
+              function handleMouseMove(event) {
+                  
+                event = event || window.event; // IE対応
+                target = document.getElementById("output_client");
+                target.innerHTML = "Client X:" + event.clientX + ", Client Y:" + event.clientY;
+        
+                target = document.getElementById("output_screen");
+                target.innerHTML = "Screen X:" + event.screenX + ", Screen Y:" + event.screenY;
+
+                let iframe = document.getElementById('Miku').contentWindow;
+                let iframeRect =document.getElementById('Miku').getBoundingClientRect();
+                iframe.postMessage({
+                    type: 'moveCursor',
+					body: {
+						x: event.clientX - iframeRect.left,
+						y: event.clientY - iframeRect.top,
+					}
+                }, '*', );
+              }
+              function handleClickBegan(event){
+                console.log(event.pageX,event.pageY)
+                let iframe = document.getElementById('Miku').contentWindow;
+                iframe.postMessage({
+                    type: 'clickBegan',
+					body: {
+						x: event.pageX,
+						y: event.pageY
+					}
+                }, '*', );
+              }
+              function handleClickEnded(event){
+                  console.log("aaaa")
+                let iframe = document.getElementById('Miku').contentWindow;
+                let iframeRect =document.getElementById('Miku').getBoundingClientRect();
+                iframe.postMessage({
+                    type: 'clickEnded',
+					body: {
+						x: event.clientX - iframeRect.left,
+						y: event.clientY - iframeRect.top,
+					}
+                }, '*', );
+              }
+            }
+        </script>
+    </head>
+
+    <body onload="init();">
+        <div class="miniMascots2" >
+
+            <iframe src="http://127.0.0.1:5501/Samples/TypeScript/Demo/dist/index.html"  frameborder="0" class="Miku" id="Miku">
+            </iframe>
+        </div>
+        <div id="output_client" ></div>
+        <div id="output_screen"></div>
+
+
+    </body>
+
+
+
+
+</html>
