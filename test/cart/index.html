@@ -1,0 +1,36 @@
+<!DOCTYPE html>
+<html lang="ja">
+    <head>
+        <meta charset="UTF-8">
+        <title>test</title>
+        <link rel="stylesheet" href="css/style.css">
+        <script type="text/javascript" src="./javaScripts/javaScript.js"></script>
+    </head>
+
+    <body>
+
+        <div class="work" id="testItem">
+            <div class="workName">作品名 : testItem</div>
+            <div class="workInfo">作品情報</div>
+            <div class="workPrice">値段</div>
+            <div class="workImage">作品画像</div>
+            <div class="subButton"><button type="button" onclick="subCart(this.parentNode.parentNode.id)">カートを削除</button></div>
+            <div class="addButton"><button type="button" onclick="addCart(this.parentNode.parentNode.id)">カートに追加</button></div>
+            
+            <div class="goShopping"><button >今すぐ購入</button></div>
+        </div>
+
+        <div class="work" id="aaaaaa">
+            <div class="workName">作品名 : aaaaaa</div>
+            <div class="workInfo">作品情報</div>
+            <div class="workPrice">値段</div>
+            <div class="workImage">作品画像</div>
+            <div class="subButton"><button type="button" onclick="subCart(this.parentNode.parentNode.id)">カートを削除</button></div>
+            <div class="addButton"><button type="button" onclick="addCart(this.parentNode.parentNode.id)">カートに追加</button></div>
+            
+            <div class="goShopping"><button >今すぐ購入</button></div>
+        </div>
+        <div id="showItem">log</div>
+        
+    </body>
+</html>
