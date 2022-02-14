@@ -80,6 +80,7 @@ function addText(str){
 }
 
 
+
 /* カートに追加ボタンを表示して,カートから削除ボタンを消す */
 function showAddButton(id){
     var elem  =   document.getElementById(id).getElementsByClassName("addButton")[0];
