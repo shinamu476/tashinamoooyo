@@ -5,32 +5,60 @@
         <title>test</title>
         <link rel="stylesheet" href="css/style.css">
         <script type="text/javascript" src="./javaScripts/javaScript.js"></script>
+        <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.0.2/dist/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-EVSTQN3/azprG1Anm3QDgpJLIm9Nao0Yz1ztcQTwFspd3yD65VohhpuuCOmLASjC" crossorigin="anonymous">
+
     </head>
 
     <body>
 
         <div class="work" id="testItem">
-            <div class="workName">作品名 : testItem</div>
-            <div class="workInfo">作品情報</div>
-            <div class="workPrice">値段</div>
-            <div class="workImage">作品画像</div>
+            <div class="workNameDiv">
+                <span class="workNameStr">作品名 : </span> 
+                <span class="workName">test</span> 
+            </div>
+            <div class="workInfoDiv">
+                <span class="workInfoStr">作品情報</span> 
+                <span class="workInfo">aaaa</span> 
+            </div>
+            <div class="workPriceDiv">
+                <span class="workPriceStr">値段 : </span>
+                <span class="workPrice">1000</span>
+            </div>
+            <div class="workImageDiv">
+                <span class="workImageStr">作品画像</span> 
+                <span class="workImage">image</span> 
+            </div>
             <div class="subButton"><button type="button" onclick="subCart(this.parentNode.parentNode.id)">カートを削除</button></div>
             <div class="addButton"><button type="button" onclick="addCart(this.parentNode.parentNode.id)">カートに追加</button></div>
-            
-            <div class="goShopping"><button >今すぐ購入</button></div>
         </div>
 
-        <div class="work" id="aaaaaa">
-            <div class="workName">作品名 : aaaaaa</div>
-            <div class="workInfo">作品情報</div>
-            <div class="workPrice">値段</div>
-            <div class="workImage">作品画像</div>
+        <div class="work" id="testItem2">
+            <div class="workNameDiv">
+                <span class="workNameStr">作品名 : </span> 
+                <span class="workName">test2</span> 
+            </div>
+            <div class="workInfoDiv">
+                <span class="workInfoStr">作品情報</span> 
+                <span class="workInfo">aaaa</span> 
+            </div>
+            <div class="workPriceDiv">
+                <span class="workPriceStr">値段 : </span>
+                <span class="workPrice">2000</span>
+            </div>
+            <div class="workImageDiv">
+                <span class="workImageStr">作品画像</span> 
+                <span class="workImage">image</span> 
+            </div>
             <div class="subButton"><button type="button" onclick="subCart(this.parentNode.parentNode.id)">カートを削除</button></div>
             <div class="addButton"><button type="button" onclick="addCart(this.parentNode.parentNode.id)">カートに追加</button></div>
-            
-            <div class="goShopping"><button >今すぐ購入</button></div>
         </div>
-        <div id="showItem">log</div>
+
+        <div id="goke">goke-</div>
+
+
+        <div id="showItem">text</div>
         
+        
+        <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.0.2/dist/js/bootstrap.bundle.min.js" integrity="sha384-MrcW6ZMFYlzcLA8Nl+NtUVF0sA7MsXsP1UyJoMp4YLEuNSfAP+JcXn/tWtIaxVXM" crossorigin="anonymous"></script>
     </body>
 </html>
