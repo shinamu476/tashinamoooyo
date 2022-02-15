@@ -1,0 +1,18 @@
+{
+    "workName1" : {
+        "name" : "作品名",
+        "info" : "作品情報",
+        "price" : 1000,
+        "image" :  "image.png",
+        "//" : "imageは[workName1]+拡張子でもよさそう"
+    },
+
+    "workName2" : {
+        "name" : "作品名2",
+        "info" : "作品情報2",
+        "price" : 2000,
+        "image" :  "image.png",
+        "//" : "imageは[workName2]+拡張子でもよさそう"
+    }
+
+}

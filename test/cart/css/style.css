@@ -12,10 +12,6 @@
   display: block;
 }
 
-.work .subButton {
-  display: none;
-}
-
 .work .workImage img {
   width: min(256px, 100%);
   height: min(256px, 100%);
