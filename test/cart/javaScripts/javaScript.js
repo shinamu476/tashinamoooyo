@@ -80,29 +80,29 @@ function addText(str){
 }
 
 
-
 /* カートに追加ボタンを表示して,カートから削除ボタンを消す */
 function showAddButton(id){
-    var elem  =   document.getElementById(id).getElementsByClassName("addButton")[0];
+    var elem  =   document.getElementById(id).querySelector(".addButton");
     elem.style.display ="block";
-    var elem  =   document.getElementById(id).getElementsByClassName("subButton")[0];
+    var elem  =   document.getElementById(id).querySelector(".subButton");
     elem.style.display ="none";
 }
 /* カートから削除ボタンを表示して,カートに追加ボタンを消す */
 function showSubButton(id){
-    var elem  =   document.getElementById(id).getElementsByClassName("subButton")[0];
+    var elem  =   document.getElementById(id).querySelector(".subButton");
     elem.style.display ="block";
-    var elem  =   document.getElementById(id).getElementsByClassName("addButton")[0];
+    var elem  =   document.getElementById(id).querySelector(".addButton");
     elem.style.display ="none";
 }
 
 function setItem(id){
     if(!items.isItem(id)){
         var oya  =   document.getElementById(id);
-        var name  =  oya.getElementsByClassName("workNameDiv")[0].getElementsByClassName("workName")[0].textContent;
-        var info  =   oya.getElementsByClassName("workInfoDiv")[0].getElementsByClassName("workInfo")[0].textContent;
-        var price  =  Number(oya.getElementsByClassName("workPriceDiv")[0].getElementsByClassName("workPrice")[0].textContent);
-        var image  =   oya.getElementsByClassName("workImageDiv")[0].getElementsByClassName("workImage")[0].textContent;
+        var name  =  oya.querySelector(".workName").textContent;
+        var info  =   oya.querySelector(".workInfo").textContent;
+        var price  =  Number(oya.querySelector(".workPrice").textContent);
+        oya.querySelector(".workPrice").textContent = price.toLocaleString();
+        var image  =   oya.querySelector(".workImage").textContent;
         var item=new Item(name,info,price,image);
         items.setItem(item,id);
     }
@@ -111,7 +111,7 @@ function setItem(id){
 function goke(){
     var p=items.getPrice();
     var elem  =  document.getElementById("goke");
-    elem.innerHTML = p;
+    elem.innerHTML = "合計 : "+ p;
 }
 
 /* カートに追加ボタンを押されたときの処理 */

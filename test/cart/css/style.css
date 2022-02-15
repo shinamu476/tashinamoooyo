@@ -1,3 +1,12 @@
+.work {
+  background-color: #feffe0;
+  margin: 50px 20px;
+  padding: 30px 20px;
+  border-radius: 30px;
+  -webkit-box-shadow: 0 0 8px inset;
+          box-shadow: 0 0 8px inset;
+}
+
 .work .addButton {
   position: relative;
   display: block;
@@ -5,5 +14,20 @@
 
 .work .subButton {
   display: none;
+}
+
+.work .workImage img {
+  width: min(256px, 100%);
+  height: min(256px, 100%);
+  top: 0;
+  right: 0;
+  bottom: 0;
+  left: 0;
+  margin: auto;
+  -o-object-fit: cover;
+     object-fit: cover;
+  border-radius: 30px;
+  -webkit-box-shadow: 0 0 8px gray;
+          box-shadow: 0 0 8px gray;
 }
 /*# sourceMappingURL=style.css.map */

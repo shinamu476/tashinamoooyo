@@ -1,4 +1,12 @@
+$work-background-color: #feffe0
+
+
 .work
+    background-color: $work-background-color
+    margin: 50px 20px
+    padding: 30px 20px
+    border-radius: 30px
+    box-shadow: 0 0 8px inset
     .addButton
         position: relative
         display: block
@@ -6,3 +14,17 @@
     .subButton 
         //position: absolute
         display: none
+
+    .workImage
+        img
+            //position: absolute
+            width: unquote('min(256px, 100%)')
+            height: unquote('min(256px, 100%)')
+            top: 0
+            right: 0
+            bottom: 0
+            left: 0
+            margin: auto
+            object-fit: cover
+            border-radius: 30px
+            box-shadow: 0 0 8px gray
