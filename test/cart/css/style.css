@@ -1,18 +1,32 @@
-.work {
-  background-color: #feffe0;
-  margin: 50px 20px;
-  padding: 30px 20px;
-  border-radius: 30px;
-  -webkit-box-shadow: 0 0 8px inset;
-          box-shadow: 0 0 8px inset;
+html, body {
+  height: 100%;
 }
 
-.work .addButton {
+.container, .row, .column {
+  height: 100%;
+}
+
+#works {
+  overflow-y: scroll;
+  height: 100%;
+}
+
+#works .work {
+  background-color: #feffe0;
+  margin: 20px 20px;
+  padding: 30px 20px;
+  border-radius: min(5vw, 5vh);
+  -webkit-box-shadow: 0 0 8px inset;
+          box-shadow: 0 0 8px inset;
+  position: relative;
+}
+
+#works .work .addButton {
   position: relative;
   display: block;
 }
 
-.work .workImage img {
+#works .work .workImage img {
   width: min(256px, 100%);
   height: min(256px, 100%);
   top: 0;
@@ -22,8 +36,62 @@
   margin: auto;
   -o-object-fit: cover;
      object-fit: cover;
-  border-radius: 30px;
+  border-radius: 30%;
   -webkit-box-shadow: 0 0 8px gray;
           box-shadow: 0 0 8px gray;
+}
+
+#buyCart {
+  overflow-y: scroll;
+  height: 80%;
+  position: relative;
+}
+
+#buyCart .work {
+  background-color: #feffe0;
+  margin: 20px 5px;
+  padding: 10px 0px;
+  border-radius: min(5vw, 5vh);
+  -webkit-box-shadow: 0 0 8px inset;
+          box-shadow: 0 0 8px inset;
+  position: relative;
+}
+
+#buyCart .work .addButton {
+  position: relative;
+  display: block;
+}
+
+#buyCart .work .workImage img {
+  width: 100%;
+  height: 100%;
+  top: 0;
+  right: 0;
+  bottom: 0;
+  left: 0;
+  margin: auto;
+  -o-object-fit: cover;
+     object-fit: cover;
+  border-radius: 30%;
+  -webkit-box-shadow: 0 0 8px gray;
+          box-shadow: 0 0 8px gray;
+}
+
+#buyCart .v-enter-active {
+  -webkit-transition: all 500ms;
+  transition: all 500ms;
+}
+
+#buyCart .v-enter, #buyCart .v-leave-to {
+  opacity: 0;
+}
+
+#buyCart .v-move {
+  -webkit-transition: all 700ms;
+  transition: all 700ms;
+}
+
+#buyCart .v-leave-active {
+  position: absolute;
 }
 /*# sourceMappingURL=style.css.map */

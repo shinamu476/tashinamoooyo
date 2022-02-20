@@ -1,4 +1,5 @@
-function toPrice(n){
+
+function toPrice(n) {
     return Number(n).toLocaleString() + "円";
 }
 
@@ -37,24 +38,33 @@ class Items {
     getNum(name) {
         return this.items[name].getNum();
     }
-    getItem(){
-        var v={}
+    getItem() {
+        var v = {}
         for (const itemKey of Object.keys(this.items)) {
-            v[itemKey] = this.items[itemKey].getItem()
+            var v0 = this.items[itemKey].getItem();
+            if (v0 != null) {
+                v[itemKey] = v0
+            }
         }
         return v;
     }
 }
 /* ==== Itemクラス ==================================== */
 class Item {
-    constructor(name, info, price, image) {
+    constructor(id,name, info, price, image) {
+        this.id=id;
         this.name = name; //作品名
         this.info = info; //作品情報
         this.price = price; //値段
         this.image = image; //画像パス
         this.num = 0; //購入数
     }
-
+    add(){
+        addCart(this.id);
+    }
+    sub(){
+        subCart(this.id);
+    }
     addNum() {
         this.num = this.num + 1;
     }
@@ -73,8 +83,14 @@ class Item {
     getNum() {
         return this.num;
     }
-    getItem(){
-        return {name:this.name,info:this.info,price:toPrice(this.price),num:this.num,image:this.image};
+    getItem() {
+        if (this.num > 0) {
+            return { id: this.id, name: this.name, info: this.info, price: toPrice(this.price), num: this.num, image: this.image };
+        }
+        else {
+            return null;
+        }
+
     }
 }
 
@@ -86,6 +102,14 @@ var app2 = new Vue({
     el: '#buyCart',
     data: {
         work: []
+    },
+    methods:{
+        add:function(id){
+            addCart(id)
+        },
+        sub:function(id){
+            subCart(id)
+        }
     }
 })
 
@@ -95,20 +119,27 @@ var app = new Vue({
         work: []
     },
     methods: {
+        add:function(id){
+            addCart(id)
+        },
+        sub:function(id){
+            subCart(id)
+        },
         async getCities() {
             var url = './work/work.json'
             await axios.get(url).then(x => {
                 this.work = x.data
                 for (let key in this.work) {
-                    Vue.set(app.work[key],"addButton",true);
+                    Vue.set(app.work[key], "addButton", true);
+                    Vue.set(app.work[key], "id", key);
                     var v = this.work[key];
                     v.image = "./work/" + v.image;
-                    items.setItem(new Item(v.name, v.info, v.price, v.image), key)
+                    items.setItem(new Item(key,v.name, v.info, v.price, v.image), key)
                     v.price = toPrice(v.price);
-                    this.work[key]=v;
+                    this.work[key] = v;
                 }
                 console.log(this.work)
-                app2.work=items.getItem()
+                app2.work = items.getItem()
             })
         }
     },
@@ -129,7 +160,7 @@ function addText(str) {
 
 /* カートに追加ボタンを表示して,カートから削除ボタンを消す */
 function showAddButton(id) {
-    app.work[id].addButton=true
+    app.work[id].addButton = true
     //var elem = document.getElementById(id).querySelector(".addButton");
     //elem.style.display = "block";
     //var elem = document.getElementById(id).querySelector(".subButton");
@@ -137,7 +168,7 @@ function showAddButton(id) {
 }
 /* カートから削除ボタンを表示して,カートに追加ボタンを消す */
 function showSubButton(id) {
-    app.work[id].addButton=false
+    app.work[id].addButton = false
     //var elem = document.getElementById(id).querySelector(".subButton");
     //elem.style.display = "block";
     //var elem = document.getElementById(id).querySelector(".addButton");
@@ -160,31 +191,30 @@ function setItem(id) {
 function goke() {
     var p = items.getPrice();
     var elem = document.getElementById("goke");
-    elem.innerHTML ="合計 : "+toPrice(p);
+    elem.innerHTML = "合計 : " + toPrice(p);
 }
 
 /* カートに追加ボタンを押されたときの処理 */
 function addCart(id) {
     // setItem(id);
     items.addItem(id);
-   // addText("item : " + items.getName(id) + " , num : " + items.getNum(id));
+    // addText("item : " + items.getName(id) + " , num : " + items.getNum(id));
     showSubButton(id);
     goke();
-    buyCart() ;
+    buyCart();
 }
 
 /* カートから削除ボタンを押されたときの処理 */
 function subCart(id) {
     items.subItem(id);
-   // addText("item : " + items.getName(id) + " , num : " + items.getNum(id));
+    // addText("item : " + items.getName(id) + " , num : " + items.getNum(id));
     showAddButton(id);
     goke();
-    buyCart() ;
+    buyCart();
 }
 
 function buyCart() {
-   // console.log(app2)
-    app2.work=items.getItem()
+    app2.work= items.getItem();
 }
 
 

@@ -7,7 +7,39 @@
         "//" : "imageは[workName1]+拡張子でもよさそう"
     },
 
-    "workName2" : {
+    "workName3" : {
+        "name" : "作品名2",
+        "info" : "作品情報2",
+        "price" : 2000,
+        "image" :  "image.png",
+        "//" : "imageは[workName2]+拡張子でもよさそう"
+    },
+
+    "workN1ame3" : {
+        "name" : "作品名2",
+        "info" : "作品情報2",
+        "price" : 2000,
+        "image" :  "image.png",
+        "//" : "imageは[workName2]+拡張子でもよさそう"
+    },
+
+    "workNa2me3" : {
+        "name" : "作品名2",
+        "info" : "作品情報2",
+        "price" : 2000,
+        "image" :  "image.png",
+        "//" : "imageは[workName2]+拡張子でもよさそう"
+    },
+
+    "workN3ame3" : {
+        "name" : "作品名2",
+        "info" : "作品情報2",
+        "price" : 2000,
+        "image" :  "image.png",
+        "//" : "imageは[workName2]+拡張子でもよさそう"
+    },
+
+    "workNa3me2" : {
         "name" : "作品名2",
         "info" : "作品情報2",
         "price" : 2000,
